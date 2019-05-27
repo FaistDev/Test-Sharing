@@ -13,6 +13,7 @@ public class Database {
     private String password="";
     private static Database theInstance;
     private boolean dbRes=false;
+    private boolean dbError=false;
 
     private Database()  {
 
@@ -29,10 +30,13 @@ public class Database {
         Thread th = new Thread(new Runnable() {
             @Override
             public void run() {
+                dbError=false;
+                dbRes=false;
                 try{
                     con = DriverManager.getConnection("jdbc:postgresql://10.0.2.2/test-sharing", username, password);
                     dbRes=createTables();
                 }catch (Exception e){
+                    dbError=true;
                     e.printStackTrace();
                 }
             }
@@ -41,7 +45,11 @@ public class Database {
             th.start();
             while(con==null || dbRes==false){
                 //wait
+                if(dbError){
+                    return false;
+                }
             }
+
             return true;
         }else{
             return false;

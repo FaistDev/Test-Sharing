@@ -38,16 +38,18 @@ public class ConfDatabaseAct extends AppCompatActivity {
                 Database db;
                 try{
                     db = Database.getInstance();
-                    if(etDBusername.getText()!=null && etDBpassword.getText()!=null){
+                    if(etDBusername.getText().toString().equals("") || etDBpassword.getText().toString().equals("")){
+                        Toast.makeText(getApplicationContext(), "All fields must be filled out!", Toast.LENGTH_SHORT).show();
+                    }else{
                         db.setUsername(etDBusername.getText().toString());
                         db.setPassword(etDBpassword.getText().toString());
                         if(db.buildDatabase()){
                             //Database Con established
                             System.out.println("Database established");
                             ConfDatabaseAct.this.startActivity(new Intent(ConfDatabaseAct.this, RegisterActivity.class));
+                        }else{
+                            throw new Exception("Error: LoginInfo!");
                         }
-                    }else{
-                        Toast.makeText(getApplicationContext(), "All fields must be filled out!", Toast.LENGTH_SHORT).show();
                     }
                 }catch (Exception e){
                     System.out.println("Error!");
