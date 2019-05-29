@@ -45,17 +45,18 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Check if fields are filled out
+     * Set userState to false
+     * Call db.saveUser(); if it is successful -> set userState to true
+     * Wait while userState is false
+     */
     private void onRegisterClick(){
 
-        /**
-         * Check if fields are filled out
-         * Set userState to false
-         * Call db.saveUser(); if it is successful -> set userState to true
-         * Wait while userState is false
-         */
+
 
         //Check if required fields are filled out
-        if(etUsername.getText().toString().equals("") || etPassword.getText().toString().equals("") || etMail.getText().toString().equals("")){
+        if(!fieldsFilledOut(etUsername.getText().toString(),etPassword.getText().toString(),etMail.getText().toString())){
             Toast.makeText(getApplicationContext(),"You must fill out all fields!",Toast.LENGTH_LONG).show();
         }else{
             saveUserState=false;
@@ -80,4 +81,13 @@ public class RegisterActivity extends AppCompatActivity {
 
         }
     }
+
+    public boolean fieldsFilledOut(String username, String password, String email){
+        if(username.equals("") || password.equals("") || email.equals("")){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
 }

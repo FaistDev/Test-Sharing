@@ -19,13 +19,14 @@ public class Database {
 
     }
 
+    /**
+     * Start a Thread, if database username and database password are set, that establishes the Database Connection
+     * Call method createTables() and save result
+     * Wait while tables are created
+     */
     public boolean buildDatabase() throws SQLException {
 
-        /**
-         * Start a Thread, if database username and database password are set, that establishes the Database Connection
-         * Call method createTables() and save result
-         * Wait while tables are created
-         */
+
 
         Thread th = new Thread(new Runnable() {
             @Override
@@ -72,12 +73,10 @@ public class Database {
     }
 
 
-
+    /**
+     * Create tables: users
+     */
     public boolean createTables() throws SQLException {
-
-        /**
-         * Create tables: users
-         */
 
         String sql = "DROP TABLE IF EXISTS users;"
                 + "CREATE TABLE users"
@@ -97,11 +96,12 @@ public class Database {
         return con;
     }
 
+    /**
+     * Insert a user into table users using PreparedStatement
+     */
     public boolean saveUser(String username, String email,String password) throws SQLException{
 
-        /**
-         * Insert a user into table users using PreparedStatement
-         */
+
 
         String sql = "INSERT INTO users(" +
                 "username, password, mail)" +

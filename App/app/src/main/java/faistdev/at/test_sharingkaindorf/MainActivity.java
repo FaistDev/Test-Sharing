@@ -24,13 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * configureDatabase()
+     * If Database Connection is valid -> open registration form
+     * Else open Database Configuration
+     */
     private void configureDatabase(){
 
-        /**
-         * configureDatabase()
-         * If Database Connection is valid -> open registration form
-         * Else open Database Configuration
-         */
+
 
         try{
             db = Database.getInstance();

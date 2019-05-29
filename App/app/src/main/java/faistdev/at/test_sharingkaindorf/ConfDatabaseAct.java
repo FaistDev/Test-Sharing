@@ -24,16 +24,18 @@ public class ConfDatabaseAct extends AppCompatActivity {
         final EditText etDBpassword = findViewById(R.id.etDBpassword);
 
 
+
         btDBsave.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Get Database instance
+             * Check if Database Username and Database Password are filled out
+             * Call db.buildDatabase()
+             * If configuration successfully completed -> open Registration form
+             */
             @Override
             public void onClick(View v) {
 
-                /**
-                 * Get Database instance
-                 * Check if Database Username and Database Password are filled out
-                 * Call db.buildDatabase()
-                 * If configuration successfully completed -> open Registration form
-                 */
+
 
                 Database db;
                 try{
