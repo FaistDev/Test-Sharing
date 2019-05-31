@@ -1,0 +1,60 @@
+320ebaa (HEAD -> master, origin/master, origin/HEAD) Added user manual
+* 6f7d68d Added class diagram
+* 08613e9 Changed test-protokoll + Added Method fieldsFilledOut
+* c743d02 Test Protokol + App Changes: Required fields check
+* 29e8d16 Added App files
+* b93c0d0 Added Projektantrag
+* e222720 Added JavaDoc
+* aefae29 Initial commit
+
+
+
+
+commit 320ebaa82d209b0b659d0f2d81eccf668cc679ed (HEAD -> master, origin/master, origin/HEAD)
+Author: FaistDev <ben@faistdev.at>
+Date:   Fri May 31 09:19:34 2019 +0200
+
+    Added user manual
+
+commit 6f7d68d3425a276c6af7aac704553e490727a3f0
+Author: FaistDev <ben@faistdev.at>
+Date:   Fri May 31 09:04:31 2019 +0200
+
+    Added class diagram
+
+commit 08613e9ca70af8e00c7b39d44d9e34497e2c1eef
+Author: FaistDev <ben@faistdev.at>
+Date:   Wed May 29 10:13:07 2019 +0200
+
+    Changed test-protokoll + Added Method fieldsFilledOut
+
+commit c743d02c63291794551b758b640624ced14eb1af
+Author: FaistDev <ben@faistdev.at>
+Date:   Mon May 27 12:11:35 2019 +0200
+
+    Test Protokol + App Changes: Required fields check
+
+commit 29e8d1644289c6d48f4b0a964f3af93046a7d91f
+Author: FaistDev <ben@faistdev.at>
+Date:   Mon May 27 10:46:39 2019 +0200
+
+    Added App files
+
+commit b93c0d0ee2d406bac522c0e390f467e3001bf354
+Author: FaistDev <ben@faistdev.at>
+Date:   Mon May 27 10:45:55 2019 +0200
+
+    Added Projektantrag
+
+commit e222720332a568d6f04b935cf742671cd3c02b17
+Author: FaistDev <ben@faistdev.at>
+Date:   Mon May 27 10:45:14 2019 +0200
+
+    Added JavaDoc
+
+commit aefae29b727477a8eece567e086869f6808db004
+Author: FaistDev <36361398+FaistDev@users.noreply.github.com>
+Date:   Mon May 27 10:42:09 2019 +0200
+
+    Initial commit
+
